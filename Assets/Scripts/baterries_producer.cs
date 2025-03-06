@@ -5,6 +5,7 @@ using UnityEngine;
 public class baterries_producer : MonoBehaviour
 {
     public GameObject itemPrefab;
+    public GameObject particles;
     public float r;
 
     // Start is called before the first frame update
@@ -31,6 +32,7 @@ public class baterries_producer : MonoBehaviour
     {
 
         Vector3 randomPos = Random.insideUnitCircle * r;
+        Instantiate(particles,randomPos,Quaternion.identity);
         Instantiate(itemPrefab,randomPos,Quaternion.identity);
 
     }
